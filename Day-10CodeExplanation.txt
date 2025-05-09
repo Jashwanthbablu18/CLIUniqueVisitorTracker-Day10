@@ -1,0 +1,48 @@
+This is a  program  which was designed as part of my "30-Day Python Challenge." 
+
+Functionalities of Functions:
+1. show_intro():
+   - This Function to represent introduction of this assignment / Project. Starting with a little welcome message.
+
+2. simulate_day_visits(day_num):
+   - Simulates visitor tracking for a given day (day_num).
+   - Initializes an empty set unique_visitors to store unique visitor IDs.
+   - Continuously asks the user to enter visitor IDs until they type 'done'.
+   - Adds each entered ID to the unique_visitors set, ensuring duplicates are automatically handled.
+   - displays the number of unique visitors recorded so far after each entry.
+   - After finishing input, it prints a summary of unique visitors for that day.
+   - Converts the set into a frozenset, which is an immutable version of a set, and prints it as a "snapshot" that cannot be modified.
+   - Returns the frozenset.
+
+3. compare_visits(day1_set, day2_set):
+   - Compares visitor data between two days using set operations(i.e difference(-), Intersection(&) and Union(|)).
+   - Calculates new visitors on Day 2 (day2_set - day1_set), returning visitors (day1_set & day2_set), and all unique visitors across both days (day1_set | day2_set).
+   - Prints results for new visitors, returning visitors, and total unique visitors across both days.
+
+
+4. main():
+   - Calls show_intro() to display the introduction.
+   - Simulates visitor tracking for Day 1 by calling simulate_day_visits(1) and stores the result in day1_data.
+   - Simulates visitor tracking for Day 2 by calling simulate_day_visits(2) and stores the result in day2_data.
+   - Compares the visitor data between Day 1 and Day 2 using compare_visits(day1_data, day2_data).
+
+Starting point: 
+- The script is designed to run when executed directly. The conditional if __name__ == "__main__": main() ensures that main() is called only when the script is run as a standalone program, not when imported as a module.
+
+Key Concepts
+- Sets: Used to store unique visitor IDs, automatically handling duplicates.
+- Frozensets: Used to create an immutable snapshot of the visitor data for each day.
+- Set Operations: Used to compare data between different days (e.g., union, intersection, difference).
+
+What I've learnt:
+- Sets: Python sets are unordered collection of unique elements, mutable.
+- sets are represented in { }.
+- Sets can store / hold only numeric, string, boolean, tuple and frozensets and nested sets but cannot hold lists, dictionaries
+- Sets are unordered means they don't maintain order of elements in sets and it won't allows indexing and slicing.
+- Sets won't allow to store duplicates in it.
+- Sets are mutable (allows .add(), .remove()), but elements are immutable.
+- Frozensets is a built-in datatype which represents the immutable version of set (Once created we cannot add, remove and change it's elements, and thats the frozen means.)
+- So, finally sets are useful for; automatic duplicate removal (duplicates are automatically filters out), Fast membership testing (finds existing fastly),
+  supports mathematical set operations (i.e difference, union, intersection) and useful for deduplication (eliminates the repeated entries from sequences).
+- Some disadvantages of sets are; sets are unordered (so there is no indexing, slicing and ordering), Only immutable / hashable items are allowed
+  (means cannot hold mutable types like lists, dictionaries), not suitable for ordered data, limited built-in methods, 
